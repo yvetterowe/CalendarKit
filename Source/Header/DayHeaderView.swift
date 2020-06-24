@@ -9,7 +9,7 @@ public final class DayHeaderView: UIView, DaySelectorDelegate, DayViewStateUpdat
   private var style = DayHeaderStyle()
   private var currentSizeClass = UIUserInterfaceSizeClass.compact
 
-  public weak var state: DayViewState? {
+  public var state: DayViewState? {
     willSet(newValue) {
       state?.unsubscribe(client: self)
     }
